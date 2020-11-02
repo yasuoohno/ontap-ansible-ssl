@@ -1,6 +1,10 @@
-# Ansibleの ONTAPモジュールでSSLクライアント認証を使う
+These are sample scripts to setup ONTAP ssl client authentication for ONTAP ansible modules.
 
-同タイトルで Qiita記事にのせた内容のサンプルスクリプトです。
+Use freely at your own risk.
 
-実行をする方の自己責任でご利用ください。
+# How to use
+
+1. install openssl, curl and jq.
+2. edit param file
+3. execute 01 to 03 shell scripts.
 

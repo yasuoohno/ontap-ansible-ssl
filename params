@@ -1,18 +1,18 @@
 #
-# Ansibleで使う、ONTAP APIの認証ユーザ(クラスタ管理者またはSVM管理者)
+# Administrator ID and SVM for ansible ONTAP modules.
 #
-ANSIBLE_USER=admin
-ANSIBLE_SVM=cluster
+ANSIBLE_USER=admin_or_vsadmin
+ANSIBLE_SVM=svmname_used_in_ansible
 
 #
-# 設定に使う ONTAPのクラスタ管理者情報
+# Cluster administrator ID and cluster admin SVM name and ip address to configure ONTAP
 #
-ONTAP_CLUSTER=cluster
+ONTAP_CLUSTER=cluster_admin_svm
 ONTAP_ADMIN=admin
-ONTAP_CLUSTER_MGMT_IP=xxx.xxx.xxx.xxx
+ONTAP_CLUSTER_MGMT_IP=cluster_management_ip_address
 
 #
-# 証明書のファイル名
+# filename for public and private key pair
 #
 PUBLICKEY_FILE=$ANSIBLE_SVM-$ANSIBLE_USER.pem
 PRIVATEKEY_FILE=$ANSIBLE_SVM-$ANSIBLE_USER.key
