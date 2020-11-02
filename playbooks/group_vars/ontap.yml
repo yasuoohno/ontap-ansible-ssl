@@ -1,0 +1,9 @@
+---
+ansible_host: localhost
+ansible_connection: local
+ansible_python_interpreter: "/usr/bin/python3"
+
+ontap_hostname: "172.16.80.210"
+ontap_cert_filepath: "ontap-admin.pem"
+ontap_key_filepath: "ontap-admin.key"
+ontap_validate_certs: false

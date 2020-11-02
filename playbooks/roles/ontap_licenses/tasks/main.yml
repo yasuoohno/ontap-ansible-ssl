@@ -1,0 +1,9 @@
+- name: ensure ontap licenses
+  loop: "{{ licenses }}"
+  na_ontap_license:
+    state: present
+    hostname: "{{ ontap_hostname }}"
+    cert_filepath: "{{ ontap_cert_filepath }}"
+    key_filepath: "{{ ontap_key_filepath }}"
+    validate_certs: "{{ ontap_validate_certs }}"
+    license_codes: "{{ item }}"

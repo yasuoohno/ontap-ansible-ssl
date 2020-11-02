@@ -1,0 +1,10 @@
+#
+# ontap group:
+#   all ontap hosts that shared group vars 'group_vars/ontap.yml'
+#
+ontap:
+  hosts:
+    cluster:
+    svm01:
+    node01:
+    node02:

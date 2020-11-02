@@ -1,0 +1,24 @@
+- hosts: cluster
+  collections: netapp.ontap
+  gather_facts: no
+  vars:
+    cert_login: &login
+      hostname: "{{ ontap_hostname }}"
+      cert_filepath: "{{ ontap_cert_filepath }}"
+      key_filepath: "{{ ontap_key_filepath }}"
+      validate_certs: "{{ ontap_validate_certs }}"
+
+  roles:
+    - role: ontap_licenses
+      licenses:
+        - "xxxxxxxxxxxxxxxxxAAAAAAAAAAA"
+        - "xxxxxxxxxxxxxxxxxAAAAAAAAAAA"
+
+  tasks:
+    - name: Gather ONTAP facts.
+      na_ontap_rest_info:
+        <<: *login
+        state: info
+      register: result
+        
+    - debug: var=result
