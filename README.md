@@ -1,2 +1,6 @@
-# ontap-ansible-ssl
-Using SSL client authentication with Ansible-ONTAP modules
+# Ansibleの ONTAPモジュールでSSLクライアント認証を使う
+
+同タイトルで Qiita記事にのせた内容のサンプルスクリプトです。
+
+実行をする方の自己責任でご利用ください。
+
